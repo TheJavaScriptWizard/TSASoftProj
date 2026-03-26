@@ -1,0 +1,44 @@
+{
+  "name": "syntactic-sonar-vscode",
+  "displayName": "Syntactic Sonar",
+  "description": "Accessible audio feedback for code structure",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "syntactic-sonar.start",
+        "title": "Start Syntactic Sonar"
+      },
+      {
+        "command": "syntactic-sonar.stop",
+        "title": "Stop Syntactic Sonar"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx vsce package",
+    "install-ext": "code --install-extension syntactic-sonar-vscode-0.0.1.vsix"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "18.x",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
